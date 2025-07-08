@@ -1,3 +1,15 @@
+const COLOR_FOUNDATION = '3B7DDD';
+const COLOR_COMPLIANCE = '4BA96E';
+const COLOR_PRODUCTS = 'F6C244';
+const COLOR_REVENUE = '8B2332';
+const COLOR_BACKGROUND = 'FFFFFF';
+const COLOR_BACKGROUND_LIGHT = 'F6F8FB';
+const COLOR_BORDER = 'E3E7ED';
+const COLOR_TEXT_PRIMARY = '22325A';
+const COLOR_TEXT_SECONDARY = 'FFFFFF';
+const COLOR_AGENDA_TEXT = '22325A';
+const COLOR_KEY_INSIGHT_BG = 'E6F4EC';
+
 function addTitle(slide, pptx) {
   slide.addText('The Dependencies Dilemma', {
     x: 1,
@@ -6,7 +18,7 @@ function addTitle(slide, pptx) {
     h: 1.2,
     fontSize: 60,
     bold: true,
-    color: '22325A',
+    color: COLOR_TEXT_PRIMARY,
     align: 'left',
     fontFace: 'Arial'
   });
@@ -18,16 +30,16 @@ function addSubtitle(slide, pptx) {
     y: 2.1,
     w: 17.6,
     h: 1.2,
-    fill: { color: 'FFFFFF' },
-    line: { color: 'FFFFFF' },
+    fill: { color: COLOR_BACKGROUND },
+    line: { color: COLOR_BORDER },
     shadow: { type: 'outer', color: '888888', blur: 8, offset: 4, angle: 90, opacity: 0.18 },
     rectRadius: 0.2
   });
   slide.addText(
     [
-      { text: "The value of an initiative isn't just its immediate impact, ", options: { fontSize: 32, italic: true, color: '22325A', fontFace: 'Arial' } },
-      { text: 'but what it unlocks ', options: { fontSize: 32, italic: true, color: '4BA96E', fontFace: 'Arial' } },
-      { text: '\uD83D\uDD12.', options: { fontSize: 32, italic: true, color: '22325A', fontFace: 'Arial' } }
+      { text: "The value of an initiative isn't just its immediate impact, ", options: { fontSize: 32, italic: true, color: COLOR_TEXT_PRIMARY, fontFace: 'Arial' } },
+      { text: 'but what it unlocks ', options: { fontSize: 32, italic: true, color: COLOR_COMPLIANCE, fontFace: 'Arial' } },
+      { text: '\uD83D\uDD12.', options: { fontSize: 32, italic: true, color: COLOR_TEXT_PRIMARY, fontFace: 'Arial' } }
     ],
     {
       x: 1.3,
@@ -46,8 +58,8 @@ function addRealWorldExample(slide, pptx) {
     y: 3.6,
     w: 8.7,
     h: 3.6,
-    fill: { color: 'F6F8FB' },
-    line: { color: 'E3E7ED' },
+    fill: { color: COLOR_BACKGROUND_LIGHT },
+    line: { color: COLOR_BORDER },
     shadow: { type: 'outer', color: '888888', blur: 6, offset: 2, angle: 90, opacity: 0.10 },
     rectRadius: 0.2
   });
@@ -58,7 +70,7 @@ function addRealWorldExample(slide, pptx) {
     h: 0.5,
     fontSize: 26,
     bold: true,
-    color: '22325A',
+    color: COLOR_TEXT_PRIMARY,
     fontFace: 'Arial',
     align: 'left',
     valign: 'top',
@@ -69,7 +81,7 @@ function addRealWorldExample(slide, pptx) {
     w: 8,
     h: 0.5,
     fontSize: 20,
-    color: '22325A',
+    color: COLOR_TEXT_PRIMARY,
     fontFace: 'Arial',
     align: 'left',
     valign: 'top',
@@ -87,7 +99,7 @@ function addRealWorldExample(slide, pptx) {
       w: 7.4,
       h: 0.4,
       fontSize: 20,
-      color: '22325A',
+      color: COLOR_TEXT_PRIMARY,
       fontFace: 'Arial',
       align: 'left',
       valign: 'top',
@@ -104,8 +116,8 @@ function addDependencyMapping(slide, pptx) {
     y: 7.5,
     w: 8.7,
     h: 3.1,
-    fill: { color: 'FFFFFF' },
-    line: { color: 'E3E7ED' },
+    fill: { color: COLOR_BACKGROUND },
+    line: { color: COLOR_BORDER },
     shadow: { type: 'outer', color: '888888', blur: 6, offset: 2, angle: 90, opacity: 0.10 },
     rectRadius: 0.2
   });
@@ -116,7 +128,7 @@ function addDependencyMapping(slide, pptx) {
     h: 0.5,
     fontSize: 26,
     bold: true,
-    color: '22325A',
+    color: COLOR_TEXT_PRIMARY,
     fontFace: 'Arial',
     align: 'left',
     valign: 'top',
@@ -151,8 +163,8 @@ function addKeyInsight(slide, pptx) {
     y: 10.9,
     w: 8,
     h: 1.9,
-    fill: { color: '4BA96E' },
-    line: { color: '4BA96E' },
+    fill: { color: COLOR_COMPLIANCE },
+    line: { color: COLOR_COMPLIANCE },
     rectRadius: 0.2
   });
   slide.addShape(pptx.ShapeType.roundRect, {
@@ -160,14 +172,14 @@ function addKeyInsight(slide, pptx) {
     y: 10.9,
     w: 8.7 - 0.1,
     h: 1.9,
-    fill: { color: 'E6F4EC' },
-    line: { color: 'E6F4EC' },
+    fill: { color: COLOR_KEY_INSIGHT_BG },
+    line: { color: COLOR_KEY_INSIGHT_BG },
     shadow: { type: 'outer', color: '888888', blur: 6, offset: 2, angle: 90, opacity: 0.10 },
     rectRadius: 0.2
   });
   slide.addText([
-    { text: 'Key Insight: ', options: { fontSize: 24, bold: true, color: '4BA96E', fontFace: 'Arial' } },
-    { text: 'Foundation investments create exponential value through what they unlock, not just their direct impact.', options: { fontSize: 24, color: '22325A', fontFace: 'Arial' } }
+    { text: 'Key Insight: ', options: { fontSize: 24, bold: true, color: COLOR_COMPLIANCE, fontFace: 'Arial' } },
+    { text: 'Foundation investments create exponential value through what they unlock, not just their direct impact.', options: { fontSize: 24, color: COLOR_TEXT_PRIMARY, fontFace: 'Arial' } }
   ], {
     x: 1.4,
     y: 11.3,
@@ -187,8 +199,8 @@ function addFeatureEnablementTree(slide, pptx) {
     y: 5.1,
     w: 8.7,
     h: 6.2,
-    fill: { color: 'FFFFFF' },
-    line: { color: 'E3E7ED' },
+    fill: { color: COLOR_BACKGROUND },
+    line: { color: COLOR_BORDER },
     shadow: { type: 'outer', color: '888888', blur: 8, offset: 4, angle: 90, opacity: 0.15 },
     rectRadius: 0.2
   });
@@ -196,16 +208,16 @@ function addFeatureEnablementTree(slide, pptx) {
   // Title
   slide.addText('Feature Enablement Tree', {
     x: 11, y: 5.35, w: 7, h: 0.5,
-    fontSize: 24, color: '22325A', fontFace: 'Arial', align: 'center', valign: 'middle'
+    fontSize: 24, color: COLOR_TEXT_PRIMARY, fontFace: 'Arial', align: 'center', valign: 'middle'
   });
 
   // Diagram Agenda (legend style, below the tree, matching the example)
   const legendY = 10.7; // tree background y + h + gap
   const legendItems = [
-    { text: 'Foundation', color: '3B7DDD' },
-    { text: 'Compliance', color: '4BA96E' },
-    { text: 'Products', color: 'F6C244' },
-    { text: 'Revenue', color: '8B2332' }
+    { text: 'Foundation', color: COLOR_FOUNDATION },
+    { text: 'Compliance', color: COLOR_COMPLIANCE },
+    { text: 'Products', color: COLOR_PRODUCTS },
+    { text: 'Revenue', color: COLOR_REVENUE }
   ];
   const legendW = 7.5, legendH = 0.3;
   const legendX = 10.5 + (8.5 - legendW) / 2; // tree background x + centering
@@ -225,7 +237,7 @@ function addFeatureEnablementTree(slide, pptx) {
       w: legendSpacing - 0.28,
       h: legendH,
       fontSize: 15,
-      color: '22325A',
+      color: COLOR_TEXT_PRIMARY,
       fontFace: 'Arial',
       align: 'left',
       valign: 'middle',
@@ -245,11 +257,11 @@ function addFeatureEnablementTree(slide, pptx) {
   revenueBoxes.forEach((node, i) => {
     slide.addShape(pptx.ShapeType.roundRect, {
       x: node.x, y: revenueY, w: revenueBoxW, h: revenueBoxH,
-      fill: { color: '8B2332' }, line: { color: '8B2332' }, rectRadius: 0.1
+      fill: { color: COLOR_REVENUE }, line: { color: COLOR_REVENUE }, rectRadius: 0.1
     });
     slide.addText(node.text, {
       x: node.x, y: revenueY, w: revenueBoxW, h: revenueBoxH,
-      fontSize: 12, color: 'FFFFFF', align: 'center', valign: 'middle', fontFace: 'Arial'
+      fontSize: 12, color: COLOR_TEXT_SECONDARY, align: 'center', valign: 'middle', fontFace: 'Arial'
     });
   });
 
@@ -264,11 +276,11 @@ function addFeatureEnablementTree(slide, pptx) {
   productBoxes.forEach((node, i) => {
     slide.addShape(pptx.ShapeType.roundRect, {
       x: node.x, y: productY, w: productBoxW, h: productBoxH,
-      fill: { color: 'F6C244' }, line: { color: 'F6C244' }, rectRadius: 0.1
+      fill: { color: COLOR_PRODUCTS }, line: { color: COLOR_PRODUCTS }, rectRadius: 0.1
     });
     slide.addText(node.text, {
       x: node.x, y: productY, w: productBoxW, h: productBoxH,
-      fontSize: 12, color: 'FFFFFF', align: 'center', valign: 'middle', fontFace: 'Arial'
+      fontSize: 12, color: COLOR_TEXT_SECONDARY, align: 'center', valign: 'middle', fontFace: 'Arial'
     });
   });
 
@@ -282,11 +294,11 @@ function addFeatureEnablementTree(slide, pptx) {
   complianceBoxes.forEach((node, i) => {
     slide.addShape(pptx.ShapeType.roundRect, {
       x: node.x, y: complianceY, w: complianceBoxW, h: complianceBoxH,
-      fill: { color: '4BA96E' }, line: { color: '4BA96E' }, rectRadius: 0.1
+      fill: { color: COLOR_COMPLIANCE }, line: { color: COLOR_COMPLIANCE }, rectRadius: 0.1
     });
     slide.addText(node.text, {
       x: node.x, y: complianceY, w: complianceBoxW, h: complianceBoxH,
-      fontSize: 12, color: 'FFFFFF', align: 'center', valign: 'middle', fontFace: 'Arial'
+      fontSize: 12, color: COLOR_TEXT_SECONDARY, align: 'center', valign: 'middle', fontFace: 'Arial'
     });
   });
 
@@ -305,11 +317,11 @@ function addFeatureEnablementTree(slide, pptx) {
   };
   slide.addShape(pptx.ShapeType.roundRect, {
     x: foundationBox.x, y: foundationBox.y, w: foundationBox.w, h: foundationBox.h,
-    fill: { color: '3B7DDD' }, line: { color: '3B7DDD' }, rectRadius: 0.1
+    fill: { color: COLOR_FOUNDATION }, line: { color: COLOR_FOUNDATION }, rectRadius: 0.1
   });
   slide.addText(foundationBox.text, {
     x: foundationBox.x + 0.9, y: foundationBox.y, w: 1.5, h: foundationBox.h,
-    fontSize: 15, color: 'FFFFFF', align: 'center', valign: 'middle', fontFace: 'Arial'
+    fontSize: 15, color: COLOR_TEXT_SECONDARY, align: 'center', valign: 'middle', fontFace: 'Arial'
   });
 
   // --- Draw lines from foundation to selected compliance boxes ---
@@ -328,7 +340,7 @@ function addFeatureEnablementTree(slide, pptx) {
       y: foundationTopY,
       w: compCenterX - foundationCenterX,
       h: compBottomY - foundationTopY,
-      line: { color: '4BA96E', width: 2 },
+      line: { color: COLOR_COMPLIANCE, width: 2 },
       flipH
     });
   });
@@ -346,7 +358,7 @@ function addFeatureEnablementTree(slide, pptx) {
         y: compTopY,
         w: prodCenterX - compCenterX,
         h: prodBottomY - compTopY,
-        line: { color: '4BA96E', width: 2 },
+        line: { color: COLOR_COMPLIANCE, width: 2 },
         flipH
       });
     });
@@ -365,7 +377,7 @@ function addFeatureEnablementTree(slide, pptx) {
         y: prodTopY,
         w: revCenterX - prodCenterX,
         h: revBottomY - prodTopY,
-        line: { color: 'F6C244', width: 2 },
+        line: { color: COLOR_PRODUCTS, width: 2 },
         flipH
       });
     });
