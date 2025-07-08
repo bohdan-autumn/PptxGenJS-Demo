@@ -382,7 +382,6 @@ function addFeatureEnablementTree(slide, pptx) {
       });
     });
   });
-
 }
 
 function addDemoContent(slide, pptx) {
